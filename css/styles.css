@@ -1,0 +1,119 @@
+/* Universal CSS styling start */
+#lebron {
+    margin-left: 23px;
+}
+
+#toplogo {
+    margin-top: 50px;
+}
+
+/*This provides the gradient effect of the navbar */
+.navbar {
+    background: rgba(134,174,204,1);
+    background: -moz-linear-gradient(top, rgba(134,174,204,1) 0%, rgba(212,228,239,1) 77%, rgba(212,228,239,1) 89%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(134,174,204,1)), color-stop(77%, rgba(212,228,239,1)), color-stop(89%, rgba(212,228,239,1)));
+    background: -webkit-linear-gradient(top, rgba(134,174,204,1) 0%, rgba(212,228,239,1) 77%, rgba(212,228,239,1) 89%);
+    background: -o-linear-gradient(top, rgba(134,174,204,1) 0%, rgba(212,228,239,1) 77%, rgba(212,228,239,1) 89%);
+    background: -ms-linear-gradient(top, rgba(134,174,204,1) 0%, rgba(212,228,239,1) 77%, rgba(212,228,239,1) 89%);
+    background: linear-gradient(to bottom, rgba(134,174,204,1) 0%, rgba(212,228,239,1) 77%, rgba(212,228,239,1) 89%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#86aecc', endColorstr='#d4e4ef', GradientType=0 );
+}
+
+/* Home page css start */
+.intro {
+    font-weight: 200;
+}
+
+.btn {
+    margin-top: 25px;
+}
+
+.navheading {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* About page CSS start */
+#faq p {
+    font-weight: 200;
+}
+
+.faq {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+/* Data page CSS start */
+
+
+
+
+
+
+
+
+
+
+
+/* Controls spacing of the notes appearing below each main content block */
+.subnote {
+    margin-top: 5px;
+}
+
+/* Controls formatting for all main contentblocks across html files */
+.contentblock {
+    margin-top: 30px;
+    padding: 5%;
+}
+
+/* Controls formatting for all headings across html files */
+.headings {
+    margin-top: 25px;
+    font-size: 34px;
+    font-weight: 300;
+}
+
+/* Styles the form labels across Data/Login/Registration page */
+label {
+    text-align: left;
+    font-weight: 200;
+}
+
+/* All non-pc media device formatting */
+@media only screen and (max-width: 1025px) {
+    .banner {
+        display: none;
+    }
+    .myheader {
+        font-size: 45px;
+    }
+    .intro {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+    .row {
+        padding: 5%;
+    }
+  }
+
+/* Hides pictures on the about page from small and medium devices */
+@media only screen and (max-width: 1023px) {
+    .aboutpics {
+        display: none;
+    }
+}
+
+/* Medium device and larger formatting */
+@media only screen and (min-width: 768px) {
+    /* Restricts a heading that appears on the navbar */
+    .navheading {
+        display: none;
+    }
+}
+
+/* Logo button removal from devices without a hamburger nav */
+@media only screen and (max-width: 768px) {
+    .homebutton {
+        display: none;
+    }
+}
