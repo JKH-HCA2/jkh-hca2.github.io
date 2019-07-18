@@ -18,23 +18,20 @@
 </head>
 
 <body>
+	
 	<!-- Navbar Start -->
-	<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+	<nav class="navbar navbar-expand-lg navbar-light sticky-top gradient">
 		<a class="navbar-brand" href="index.html">
 			<img class="homebutton" src="images/navicon.png" width="30" height="30" alt="NavIcon">
 		</a>
-		<h2 class="navheading">BasketballPolls.com</h2>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
 			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<header class="collapse navbar-collapse" id="navbarNav">
+		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav">
 				<li class="nav-item">
 					<a class="nav-link" href="#">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="data.html">Data</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="about.html">About</a>
@@ -46,22 +43,30 @@
 					<a class="nav-link" href="register.html">Register</a>
 				</li>
 			</ul>
-		</header>
+		</div>
 	</nav>
 
 	<!-- Main Content -->
 	<main class="row no-gutters">
 		<aside class="col-md-3 left">
-			<img class="banner" src="images/steph5.jpg" alt="Steph Curry">
+			<!-- All images are copyrighted by the National Basketball Association-->
+			<img class="banner border-right border-primary" src="images/steph5.jpg" alt="Steph Curry">
 		</aside>
+		
 		<!-- Introductory Description -->
 		<section class="col-md-6 center text-center">
 			<img src="images/navicon.png" alt="Top Logo" id="toplogo">
 			<h1 class="headings">Basketball Polls</h1>
 			<section class="contentblock border border-primary rounded-lg">
-				<p class="intro">Welcome to &copy; Basketball Polls. Here you will find a compilation of user submitted data
+				<p class="intro">Welcome to &copy; Basketball Polls. Here you will find a compilation of user submitted
+					data
 					comparing opinions on some of basketball's most hotly debated topics.</p>
-				<p class="intro">To begin, register an account with us by clicking below, before heading over to the data page.</p>
+				<p class="intro">If you've ever wondered how most people feel about Jordan vs Lebron, or Shaq vs Kobe,
+					you've come
+					to the right place!</p>
+				<p class="intro">To begin, register an account with us by clicking below, before heading over to the
+					data page.</p>
+				<p class="intro">Remember not to take the results <em>too</em> seriously and make sure to have fun!</p>
 				<form method="get" action="register.html">
 					<button type="submit" class="btn btn-outline-primary">Get Started</button>
 				</form>
@@ -69,9 +74,15 @@
 			<p class="subnote">Learn more about the site <a href="about.html">here</a></p>
 		</section>
 		<aside class="col-md-3 right">
-			<img id="lebron" class="banner" src="images/lebron4.jpg" alt="Lebron James">
+			<img id="lebron" class="banner border-left border-primary float-right" src="images/lebron4.jpg"
+				alt="Lebron James">
 		</aside>
 	</main>
+	<footer class="footer myfooter">
+		<div class="container text-center">
+			<p class="copyright">Copyright &copy; 2019 BasketballPolls, Inc. All rights reserved.</p>
+		</div>
+	</footer>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->

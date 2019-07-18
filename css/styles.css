@@ -1,14 +1,32 @@
 /* Universal CSS styling start */
-#lebron {
-    margin-left: 23px;
+#toplogo {
+    margin-top: 35px;
 }
 
-#toplogo {
-    margin-top: 50px;
+.copyright {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.myfooter {
+    padding: 1%;
+    background: rgba(212,228,239,1);
+    background: -moz-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(212,228,239,1) 11%, rgba(201,221,234,1) 23%, rgba(134,174,204,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(212,228,239,1)), color-stop(11%, rgba(212,228,239,1)), color-stop(23%, rgba(201,221,234,1)), color-stop(100%, rgba(134,174,204,1)));
+    background: -webkit-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(212,228,239,1) 11%, rgba(201,221,234,1) 23%, rgba(134,174,204,1) 100%);
+    background: -o-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(212,228,239,1) 11%, rgba(201,221,234,1) 23%, rgba(134,174,204,1) 100%);
+    background: -ms-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(212,228,239,1) 11%, rgba(201,221,234,1) 23%, rgba(134,174,204,1) 100%);
+    background: linear-gradient(to bottom, rgba(212,228,239,1) 0%, rgba(212,228,239,1) 11%, rgba(201,221,234,1) 23%, rgba(134,174,204,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=0 );
+}
+
+.navheading {
+    font-size: 18px;
+    font-weight: 300;
 }
 
 /*This provides the gradient effect of the navbar */
-.navbar {
+.gradient {
     background: rgba(134,174,204,1);
     background: -moz-linear-gradient(top, rgba(134,174,204,1) 0%, rgba(212,228,239,1) 77%, rgba(212,228,239,1) 89%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(134,174,204,1)), color-stop(77%, rgba(212,228,239,1)), color-stop(89%, rgba(212,228,239,1)));
@@ -25,12 +43,7 @@
 }
 
 .btn {
-    margin-top: 25px;
-}
-
-.navheading {
-    font-size: 18px;
-    font-weight: 300;
+    margin-top: 10px;
 }
 
 /* About page CSS start */
@@ -43,16 +56,10 @@
     font-weight: 300;
 }
 
-/* Data page CSS start */
-
-
-
-
-
-
-
-
-
+/* Switch positioning for login and registration pages */
+.myswitch {
+    margin-bottom: 5px;
+}
 
 
 /* Controls spacing of the notes appearing below each main content block */
@@ -68,7 +75,7 @@
 
 /* Controls formatting for all headings across html files */
 .headings {
-    margin-top: 25px;
+    margin-top: 15px;
     font-size: 34px;
     font-weight: 300;
 }
@@ -77,6 +84,14 @@
 label {
     text-align: left;
     font-weight: 200;
+}
+
+/* Table CSS start */
+table th {
+    font-weight: 500;
+}
+table td {
+    font-weight: 300;
 }
 
 /* All non-pc media device formatting */
@@ -94,6 +109,9 @@ label {
     .row {
         padding: 5%;
     }
+    .myfooter {
+        background: white;
+    }
   }
 
 /* Hides pictures on the about page from small and medium devices */
@@ -101,10 +119,22 @@ label {
     .aboutpics {
         display: none;
     }
+    table th {
+        font-size: 10px;
+    }
+    table td {
+        font-size: 10px;
+    }
+    #toplogo {
+        display: none;
+    }
+    .homebutton {
+        display: none;
+    }
 }
 
 /* Medium device and larger formatting */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
     /* Restricts a heading that appears on the navbar */
     .navheading {
         display: none;
@@ -115,5 +145,11 @@ label {
 @media only screen and (max-width: 768px) {
     .homebutton {
         display: none;
+    }
+}
+
+@media only screen and (min-width: 1365px) {
+    .myfooter {
+        background: white;
     }
 }

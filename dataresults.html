@@ -19,52 +19,106 @@
 </head>
 
 <body>
+    
     <!-- Navbar Start-->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top gradient">
         <a class="navbar-brand" href="index.html">
             <img class="homebutton" src="images/navicon.png" width="30" height="30" alt="">
         </a>
-        <h2 class="navheading">BasketballPolls.com</h2>
+        <h2 class="navheading">BasketballPolls</h2>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <header class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="data.html">Data</a>
+                    <a class="nav-link" href="data.html">Questionnaire</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.html">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="register.html">Register</a>
+                    <a class="nav-link" href="index.html">Logout</a>
                 </li>
             </ul>
-        </header>
+        </div>
     </nav>
 
     <!-- Main Content -->
     <main class="row no-gutters">
         <aside class="col-md-3 left">
-            <img class="banner" src="images/steph5.jpg" alt="Steph Curry">
+            <!-- All images are copyrighted by the National Basketball Association-->
+            <img class="banner border-right border-primary" src="images/steph5.jpg" alt="Steph Curry">
         </aside>
+        
         <!-- Results Page -->
         <section class="col-md-6 center text-center">
             <img src="images/navicon.png" alt="Top Logo" id="toplogo">
-            <h1 class="headings">Results</h1>
-
+            <h1 class="headings">Recent Results</h1>
+            <table class="table table-responsive table-borderless border border-primary rounded-lg contentblock">
+                <thead>
+                    <tr>
+                        <th scope="col">Username</th>
+                        <th scope="col">Home State</th>
+                        <th scope="col">Favorite Team</th>
+                        <th scope="col">Favorite Player</th>
+                        <th scope="col">GOAT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Bullsfan22</th>
+                        <td>Illinois</td>
+                        <td>Bulls</td>
+                        <td>Jordan</td>
+                        <td>Jordan</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">kingjames94</th>
+                        <td>Ohio</td>
+                        <td>Cavaliers</td>
+                        <td>Lebron</td>
+                        <td>Lebron</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ChefCurry</th>
+                        <td>California</td>
+                        <td>Warriors</td>
+                        <td>Steph</td>
+                        <td>Wilt</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Lakeshow86</th>
+                        <td>California</td>
+                        <td>Lakers</td>
+                        <td>Kobe</td>
+                        <td>Magic</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">87ers11</th>
+                        <td>Pennsylvania</td>
+                        <td>Sixers</td>
+                        <td>Iverson</td>
+                        <td>Jordan</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="subnote">See how your results compare <a href="stats.html">here</a></p>
         </section>
         <aside class="col-md-3 right">
-            <img class="banner" id="lebron" src="images/lebron4.jpg" alt="Lebron James">
+            <img id="lebron" class="banner border-left border-primary float-right" src="images/lebron4.jpg"
+                alt="Lebron James">
         </aside>
     </main>
+    <footer class="footer myfooter">
+        <div class="container text-center">
+            <p class="copyright">Copyright &copy; 2019 BasketballPolls, Inc. All rights reserved.</p>
+        </div>
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
