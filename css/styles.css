@@ -65,6 +65,7 @@
 /* Controls spacing of the notes appearing below each main content block */
 .subnote {
     margin-top: 5px;
+    font-size: 14px;
 }
 
 /* Controls formatting for all main contentblocks across html files */
@@ -90,8 +91,13 @@ label {
 table th {
     font-weight: 500;
 }
+
 table td {
     font-weight: 300;
+}
+
+#table {
+    margin-bottom: 0;
 }
 
 /* All non-pc media device formatting */
