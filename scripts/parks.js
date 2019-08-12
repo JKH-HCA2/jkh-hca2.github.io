@@ -25,6 +25,7 @@ window.onload = function()
     const btn = document.getElementById("search")
     btn.onclick = function()
     {
+        
         if (document.getElementById("location").checked)
         {
             parks.innerHTML = "";
@@ -246,36 +247,22 @@ function getHeadRow(table)
     let cell6 = row.insertCell(5);
     cell6.innerHTML = "Phone Number";
     let cell7 = row.insertCell(6);
-    cell7.innerHTML = "Coordinates";
+    cell7.innerHTML = "Website";
+    let cell8 = row.insertCell(7);
+    cell8.innerHTML = "Coordinates";
 }
 
 function getLocSearch(table, objs)
 {
     let location = document.getElementById("locationSelector").selectedIndex;
     let chosenLocation = document.querySelectorAll("select#locationSelector > option")[location].value
-
+    
     let len = objs.parks.length
-
     for (let i = 0; i < len; i++)
     {
         if (chosenLocation == objs.parks[i].State)
         {
-            let row = table.insertRow(table.rows.length);
-
-            let cell1 = row.insertCell(0);
-            cell1.innerHTML = objs.parks[i].LocationName;
-            let cell2 = row.insertCell(1);            
-            cell2.innerHTML = objs.parks[i].Address;
-            let cell3 = row.insertCell(2);            
-            cell3.innerHTML = objs.parks[i].City;
-            let cell4 = row.insertCell(3);            
-            cell4.innerHTML = objs.parks[i].State;
-            let cell5 = row.insertCell(4);            
-            cell5.innerHTML = objs.parks[i].ZipCode;
-            let cell6 = row.insertCell(5);            
-            cell6.innerHTML = objs.parks[i].Phone;
-            let cell7 = row.insertCell(6);            
-            cell7.innerHTML = objs.parks[i].Latitude + ", " + objs.parks[i].Longitude
+            tablePopulation(table, objs, i);
         }
     }
 }
@@ -284,29 +271,13 @@ function getParkTypeSearch(table, objs)
 {
     let parkType = document.getElementById("parkTypeSelector").selectedIndex;
     let chosenParkType = document.querySelectorAll("select#parkTypeSelector > option")[parkType].value
-
+    
     let len = objs.parks.length
-
     for (let i = 0; i < len; i++)
     {
         if (objs.parks[i].LocationName.search(new RegExp(chosenParkType, 'i')) != -1)
         {
-            let row = table.insertRow(table.rows.length);
-
-            let cell1 = row.insertCell(0);
-            cell1.innerHTML = objs.parks[i].LocationName;
-            let cell2 = row.insertCell(1);            
-            cell2.innerHTML = objs.parks[i].Address;
-            let cell3 = row.insertCell(2);            
-            cell3.innerHTML = objs.parks[i].City;
-            let cell4 = row.insertCell(3);            
-            cell4.innerHTML = objs.parks[i].State;
-            let cell5 = row.insertCell(4);            
-            cell5.innerHTML = objs.parks[i].ZipCode;
-            let cell6 = row.insertCell(5);            
-            cell6.innerHTML = objs.parks[i].Phone;
-            let cell7 = row.insertCell(6);            
-            cell7.innerHTML = objs.parks[i].Latitude + ", " + objs.parks[i].Longitude
+            tablePopulation(table, objs, i);
         }
     }
 }
@@ -316,23 +287,36 @@ function displayAll(table, objs)
     let len = objs.parks.length
     for (let i = 0;i < len; i++)
     {
-        let row = table.insertRow(table.rows.length);
-
-        let cell1 = row.insertCell(0);
-        cell1.innerHTML = objs.parks[i].LocationName;
-        let cell2 = row.insertCell(1);
-        cell2.innerHTML = objs.parks[i].Address;
-        let cell3 = row.insertCell(2);
-        cell3.innerHTML = objs.parks[i].City;
-        let cell4 = row.insertCell(3);
-        cell4.innerHTML = objs.parks[i].State;
-        let cell5 = row.insertCell(4);
-        cell5.innerHTML = objs.parks[i].ZipCode;
-        let cell6 = row.insertCell(5);
-        cell6.innerHTML = objs.parks[i].Phone;
-        let cell7 = row.insertCell(6);
-        cell7.innerHTML = objs.parks[i].Latitude + ", " + objs.parks[i].Longitude
+        tablePopulation(table, objs, i);
     }
+}
+
+function tablePopulation(table, objs, i)
+{
+    let row = table.insertRow(table.rows.length)
+
+    let cell1 = row.insertCell(0);
+    cell1.innerHTML = objs.parks[i].LocationName;
+    let cell2 = row.insertCell(1);
+    cell2.innerHTML = objs.parks[i].Address;
+    let cell3 = row.insertCell(2);
+    cell3.innerHTML = objs.parks[i].City;
+    let cell4 = row.insertCell(3);
+    cell4.innerHTML = objs.parks[i].State;
+    let cell5 = row.insertCell(4);
+    cell5.innerHTML = objs.parks[i].ZipCode;
+    let cell6 = row.insertCell(5);
+    cell6.innerHTML = objs.parks[i].Phone;
+    if (objs.parks[i].Visit != undefined) {
+        let cell7 = row.insertCell(6);
+        cell7.innerHTML = '<a href="' + objs.parks[i].Visit + '">' + objs.parks[i].Visit + '</a>'
+    }
+    else {
+        let cell7 = row.insertCell(6);
+        cell7.innerHTML = "&nbsp;"
+    }
+    let cell8 = row.insertCell(7);
+    cell8.innerHTML = objs.parks[i].Latitude + ", " + objs.parks[i].Longitude;
 }
 
 
