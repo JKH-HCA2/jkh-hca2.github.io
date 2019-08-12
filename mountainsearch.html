@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Enjoy the Outdoors!</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Outdoorsman</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="parksearch.html">Park Search </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="mountainsearch.html">Mountain Search<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-4">Mountain Search</h1>
+                <p>This is a template for a simple marketing or informational website. It includes a large callout
+                    called a jumbotron and three supporting pieces of content. Use it as a starting point to create
+                    something more unique.</p>
+            </div>
+        </div>
+        <div class="row mainContent">
+            <div class="col-md border border-primary rounded-lg ">
+                <form name="searchForm" class="tableDisplay">
+                    <select id="mountainSelector" class="custom-select">
+                        <option value="choose a location" selected disabled>-- Choose a Location --</option>
+                    </select>
+                    <button type="button" id="search" class="btn btn-outline-primary float-right">Get Mountain</button>
+    
+                </form>
+                <table class="table table-responsive border" id="mountain">
+                    <tr>
+                        <th>Name</th>
+                        <th>Elevation</th>
+                        <th>Effort</th>
+                        <th>Description</th>
+                        <th>Coordinates</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+    </main>
+
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="scripts/mountains.js"></script>
+</body>
+
+</html>

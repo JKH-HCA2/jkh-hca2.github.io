@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<title>Hello, world!</title>
+	<link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<a class="navbar-brand" href="index.html">Outdoorsman</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+			aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Home </a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="parksearch.html">Park Search <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="mountainsearch.html">Mountain Search</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+
+	<main>
+		<div class="jumbotron">
+			<div class="container">
+				<h1 class="display-4">National Park Search</h1>
+				<p>This is a template for a simple marketing or informational website. It includes a large callout
+					called a jumbotron and three supporting pieces of content. Use it as a starting point to create
+					something more unique.</p>
+			</div>
+		</div>
+		<div class="row mainContent">
+			<div class="col-md border border-primary rounded-lg ">
+
+				<!-- Search form selection start -->
+				<form name="searchForm" class="tableDisplay">
+					
+					<p>Search by:</p>
+					<div class="btn-group btn-group-toggle" data-toggle="buttons">
+						<label class="btn btn-secondary active">
+							<input onchange="dropdownSwitch()" type="radio" class="radioSelector" name="options"
+								id="location" checked> Location
+						</label>
+						<label class="btn btn-secondary">
+							<input onchange="dropdownSwitch()" type="radio" class="radioSelector" name="options"
+								id="parkType"> Park Type
+						</label>
+					</div>
+					<button type="button" id="displayAll" class="btn btn-outline-success float-right">Display All</button>
+					<select id="locationSelector" class="custom-select">
+						<option value="choose a location" selected disabled>-- Choose a Location --</option>
+					</select>
+					<select id="parkTypeSelector" class="custom-select">
+						<option value="choose a park type" selected disabled>-- Choose a Park Type --</option>
+					</select>
+					<button type="button" id="search" class="btn btn-outline-primary float-right">Search</button>
+				</form>
+
+				<!-- Park Display Table -->
+				<table class="table table-responsive border" id="parks">
+					<tr>
+						<th>Location</th>
+						<th>Address</th>
+						<th>City</th>
+						<th>State</th>
+						<th>Zip Code</th>
+						<th>Phone Number</th>
+						<th>Coordinates</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</main>
+
+	<!-- Optional JavaScript -->
+
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script src="scripts/parks.js"></script>
+</body>
+
+</html>

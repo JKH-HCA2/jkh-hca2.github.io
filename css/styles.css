@@ -1,35 +1,49 @@
-.calc {
-    width: 50%;
-    margin-left: 25%;
-    padding: 3%;
+.mainContent
+{
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 3%;
     margin-bottom: 3%;
 }
 
-.dates {
-    margin-top: 10px;
-}
-
-.alert {
-    display: none;
-}
-
-.masterForm {
-    margin-left: 25%;
-    width: 50%;
-}
-
-.calc2 {
+.tableDisplay
+{
     padding: 5%;
 }
 
-.totalBill {
+#parkTypeSelector
+{
+    display: none;
+}
+
+#search
+{
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.dataEntry {
-    width: 35%;
+th 
+{
+    width: 125px;
+    font-weight: 400;
 }
 
-.output {
-    margin-top:15px;
+select
+{
+    margin-top: 3%;
 }
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
