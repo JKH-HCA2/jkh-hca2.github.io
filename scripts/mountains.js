@@ -52,6 +52,8 @@ function getMtSearch(table, objs)
             cell4.innerHTML = objs.mountains[i].desc;
             let cell5 = row.insertCell(4);            
             cell5.innerHTML = objs.mountains[i].coords.lat + ", " + objs.mountains[i].coords.lng
+            let cell6 = row.insertCell(5);
+            cell6.innerHTML = '<img src=images/' + objs.mountains[i].img + ' />'
         }
     }
 }
@@ -73,4 +75,6 @@ function getHeadRow(table)
     cell4.innerHTML = "Description";
     let cell5 = row.insertCell(4);
     cell5.innerHTML = "Coordinates";
+    let cell6 = row.insertCell(5);
+    cell6.innerHTML = "Image";
 }
